@@ -88,6 +88,15 @@ summary(mtcars) #resumen estadistico
 View(orangeec)
 View(mtcars)
 
+#primeros y ultimos 6 datos
+
+head(mtcars)
+tail(mtcars)
+
+#Uso dplyr
+library("dplyr")
+glimpse(mtcars)
+
 #Cambio de tipo  de dato
 
 as.integer(entero)
@@ -128,9 +137,15 @@ meses <- c('enero','febrero','marzo','abril','mayo')
 vector_logico <-c(TRUE, TRUE, FALSE,FALSE)
 vector_logico
 
+
 #listas
 lista_uno<-list(1,"hola",3.5,vector_uno)
 lista_uno
+vector_para_lista <- 1:8
+matriz_para_lista <- matrix((1:9), ncol=3)
+dataframe_lista <- mtcars[1:4,]
+lista_de_todo <-list(vector_para_lista,matriz_para_lista,dataframe_lista)
+lista_de_todo
 
 #MAtriz
 matriz_uno <- matrix(1:9,TRUE, 3)
@@ -172,13 +187,29 @@ vector_actividad<-c(100/4, 1085/5, sqrt(9), 35)
 max(vector_actividad)
 
 
-#Uso de operadores
+#Uso de operadores filtros
 mtcars[mtcars$cyl < 6,]
 
 #ejemplo filto en data frame
 net_2015<-  netflix[netflix$release_year> 2015,]
 
-Sub
+mtcars[mtcars$cyl<6,]
+
+#funcion sub set
+
+mtcars_subset <-subset(mtcars,gear>2 & carb >2)
+mtcars_subset
+mtcars_subset <-subset(mtcars,gear>2 & carb >2,select = gear)
+mtcars_subset
+
+#renombrar columnas con la libreria plyr
+library("plyr")
+rename(mtcars,c("cyl"= "cilindros"))
+
+#Uso de factores
+factor_niveles <- c("Basico","Intermedio","Avanzado")
+factor_niveles
+
 
 
 #Lectura y Escrituta de  docmentos

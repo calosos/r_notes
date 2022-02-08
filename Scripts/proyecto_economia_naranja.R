@@ -36,5 +36,24 @@ orangeec
 new_orangeec <- subset(orangeec, Internet.penetration...population >80
                        & Internet.penetration...population > 4.5)
 new_orangeec
+new_orangeec <- subset(orangeec, Internet.penetration...population >80
+                       & Internet.penetration...population > 4.5, select = Creat.Ind...GDP)
+new_orangeec
+
+rename(orangeec, c("Creat.Ind...GDP"="AporteEcNja"))
 
 
+head(orangeec)
+tail(orangeec)
+
+glimpse(orangeec)
+
+plot(orangeec$Unemployment ~ orangeec$Education.invest...GDP, xlab="Inversión 
+     educacion (%PIB)", ylab="Desempleo",
+     main="Relacion inversion en educacion y desempleo")
+
+
+plot(orangeec$GDP.PC ~ orangeec$Creat.Ind...GDP, xlab="Aporte economia Naranja 
+     al PIB(%)", 
+     ylab="PIB per capita",
+     main="Relacion economia naranja y pib per capita")
