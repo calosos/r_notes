@@ -148,7 +148,10 @@ lista_de_todo <-list(vector_para_lista,matriz_para_lista,dataframe_lista)
 lista_de_todo
 
 #MAtriz
-matriz_uno <- matrix(1:9,TRUE, 3)
+(matriz_uno <- matrix(1:9,F, ncol=3, nrow = 3 ))
+matriz_uno
+(matriz_nueva <- matrix(1:9,T, ncol=3, nrow = 3 ))
+matriz_nueva
 y <- matrix(1 : 15, byrow = TRUE, nrow = 3)
 
 ejemplo_matriz <- matrix(c(vector_uno, vector_dos), 2, byrow = TRUE)
