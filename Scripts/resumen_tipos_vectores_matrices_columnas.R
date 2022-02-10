@@ -122,7 +122,47 @@ det(matriz_uno)
 diag(matriz_uno)
 #Resolcer un sistema de ecui
 
-#Inverda
+#Inversa
 solve(matriz_uno)
 #autovalores y autro vectoes
 eigen(matriz_uno)
+###########################################################
+###LISTAS###
+###########################################################
+
+(lista_uno<- list(nombre="Pepe", no_hijos=3, edades_hios=c(5,6,7)))
+
+#Descripción lista
+(str(lista_uno))
+
+#Extracción  elementos 
+(lista_uno$no_hijos)
+
+###########################################################
+###DATAFRAME###
+###########################################################
+
+vector_para_df_uno <-6:8
+vector_para_df_dos <- c("d","dd","ddd")
+
+(data_frame<- data.frame(edad =vector_para_df_uno, grupo=vector_para_df_dos))
+str(data_frame)
+
+#Extraccion de información
+data_frame[1] #trae la primera fila
+data_frame[3,2] #fila,columna
+data_frame[net_2016 <-netflix[netflix$release_year>2015,]]
+data_frame$edad
+
+#Agrebar y borrarcolumnas
+(data_frame$sexo <- c("H","M","H"))
+(data_frame$para_borrar <- c(F,T,T))
+(data_frame$para_borrar<-NULL)
+data_frame
+#Con la funcipon paste se puede agregar un mensaje
+
+paste("La media de la edad es:",mean(data_frame$edad))
+
+#Funcion sumary
+summary(data_frame)
+dim(data_frame)
