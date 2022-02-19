@@ -77,6 +77,7 @@ download.file(url= url2 ,destfile = "st19ncov-muertes.csv", mode = "wb")
 conf<-read.csv("st19ncov-confirmados.csv")
 mu<-read.csv("st19ncov-muertes.csv")
 
+
 str(conf)
 head(conf)
 str(mu)

@@ -28,3 +28,14 @@ altura_alumnos%>%
   xlab("Alturas")+
   ylab("Frecuencias")+
   theme_light()
+
+
+###reto dos
+##### TENER LOS DATOS
+getwd()
+setwd("E:/R/Datasets")
+url_estadisticas<-"https://raw.githubusercontent.com/beduExpert/Programacion-con-R-2021/main/Sesion-03/Reto-02/players_stats.csv"
+download.file(url_estadisticas, destfile = "estadisticas_jugadores.csv", mode = "wb")
+
+estadisticas_jugadores <- read.csv("estadisticas_jugadores.csv")
+View(estadisticas_jugadores)

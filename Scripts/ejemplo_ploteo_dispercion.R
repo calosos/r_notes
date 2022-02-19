@@ -23,10 +23,10 @@ ggplot(mtcars, aes(x=hp))+ geom_histogram()+ labs(x=
       panel.grid.major = element_blank(), panel.grid = element_blank())
 
 
-ggplot(mtcars, aes(x=hp))+ geom_histogram(binwidth = 30)+ labs(x= 
-       "Caballos de fuerza",y="cantidad de carros",
-          title = "Caballos de fuerza en carros seleccionados"
-)+ theme(legend.position = "none", panel.background = element_blank(),
+ggplot(mtcars, aes(x=hp))+ geom_histogram(binwidth = 30)+
+  labs(x= "Caballos de fuerza",y="cantidad de carros",
+       title = "Caballos de fuerza en carros seleccionados")+ 
+  theme(legend.position = "none", panel.background = element_blank(),
          panel.grid.major = element_blank(), panel.grid = element_blank())
 
 

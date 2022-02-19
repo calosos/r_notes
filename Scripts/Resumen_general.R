@@ -103,6 +103,7 @@ as.integer(entero)
 entero
 typeof(entero)
 as.character(entero)
+?as.Date
 
 
 mtcars$vs =  as.logical(mtcars$vs)
@@ -245,4 +246,5 @@ str(fata_frame)
 
 install.packages('plyr')
 library(plyr)
+
 
